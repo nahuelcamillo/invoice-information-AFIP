@@ -83,6 +83,8 @@ fs.readdir(folderPath, (err, files) => {
                 if (indexFirstDate === -1) {
                 console.log('No se encontraron fechas en el array.');
                 }
+                
+                // Para visualizar la información completa, descomentar acá.
                 //console.log(JSON.stringify(words, null, 2));
 
                 const condicionIVAReceptor = findPositionsAndExtractText(words, 'Monotributo', /^0$/);
@@ -93,7 +95,7 @@ fs.readdir(folderPath, (err, files) => {
                 console.log('Fecha desde:\t\t', words[indexFirstDate]);
                 console.log('Fecha hasta:\t\t', words[indexFirstDate+1]);
                 console.log('Fecha emisión:\t\t', words[indexFirstDate+2]);
-                console.log('CUIT Emisor:\t\t', words[indexFirstDate+3]);
+                console.log('CUIT Emisor:\t\t', words[indexFirstDate+4]);
                 console.log('Punto de venta:\t\t', words[salePointIndex]);
                 console.log('Factura:\t\t', words[salePointIndex+1]);
                 console.log('Tipo de factura:\t', words[invoiceTypeIndex+1]);
